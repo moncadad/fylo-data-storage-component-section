@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"); /* Google Fonts */
+
+:root {
+  /* ## Layout: Mobile: 375px , Desktop: 1440px */
+
+  /* ## Colors */
+  /* ### Primary */
+  /* rgb(255, 163, 153) to rgb(255, 77, 151); */
+  --Pinkish-Gradient: linear-gradient(
+    90deg,
+    rgb(255, 163, 135) 0%,
+    rgb(255, 77, 151) 100%
+  );
+
+  /* ### Neutral */
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsla(229, 7%, 55%, 0.473);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --Very-Dark-Bluey: hsla(229, 57%, 11%, 0.5);
+
+  /* ## Typography    */
+
+  --Font-Raleway: "Raleway", sans-serif;
+  --Font-400: 400;
+  --Font-700: 700;
+  --Font-body-size: 14px;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  inset: 0;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgb(255, 77, 151);
+  transition: 1s ease-in;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  background-image: url(./images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--Font-Raleway);
+  font-size: var(--Font-Raleway);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main,
+.main__wrapper {
+  max-width: 85%;
+  width: 100%;
+}
+
+.main__wrapper .controls__container {
+  background: var(--Dark-Blue);
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px 95px 10px 10px;
+}
+.main__wrapper .controls__container .buttons__container {
+  padding-top: 35px;
+  display: flex;
+}
+.main__wrapper .controls__container .buttons__container .btn {
+  background-color: var(--Very-Dark-Blue);
+  height: 48px;
+  width: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn + .btn {
+  margin-left: 20px;
+}
+
+/* section: meter */
+.main__wrapper .meter__container {
+  background: var(--Dark-Blue);
+  color: var(--Pale-Blue);
+  font-size: var(--Font-body-size);
+  padding: 32px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: var(--Font-400);
+}
+.main__wrapper .meter__container #storageUsed {
+  font-weight: var(--Font-700);
+}
+
+.main__wrapper .meter__container .info {
+  padding-bottom: 16px;
+}
+.main__wrapper .meter__container .storage-bar {
+  border: 2px solid var(--Very-Dark-Bluey);
+  border-radius: 10px;
+  background-color: var(--Very-Dark-Bluey);
+}
+.storage-bar .stored {
+  display: flex;
+  justify-content: flex-end;
+  width: 81.5%;
+  height: 16px;
+  border-radius: 10px;
+  background: var(--Pinkish-Gradient);
+}
+
+.storage-bar .stored .dial {
+  height: 12px;
+  width: 12px;
+  margin: 1px 3px 1px 0px;
+  border-radius: 50%;
+  background-color: white;
+}
+.main__wrapper .meter__container .labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: var(--Font-body-size);
+  font-weight: var(--Font-700);
+}
+.meter-tool-tip {
+  position: relative;
+  background: #fff;
+  margin-top: -40px;
+  top: 60px;
+  align-self: center;
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meter-tool-tip > p {
+  color: var(--Very-Dark-Blue);
+  font-weight: var(--Font-700);
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.meter-tool-tip > p > span {
+  color: var(--Grayish-Blue);
+  font-size: var(--Font-body-size);
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    background-image: url(./images/bg-desktop.png);
+    background-color: var(--Very-Dark-Blue);
+    background-size: contain;
+    background-position: bottom;
+  }
+  main,
+  .main__wrapper {
+    max-width: 920px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .meter__container,
+  .controls__container {
+    width: 100%;
+  }
+  .main__wrapper .meter__container .info {
+    text-align: start;
+  }
+  .meter-tool-tip {
+    position: relative;
+    background: #fff;
+    top: -100px;
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 10px 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .meter-tool-tip::after {
+    content: " ";
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #fff;
+    border-left: 20px solid transparent;
+    position: relative;
+    bottom: -36px;
+    right: -10px;
+  }
+}
