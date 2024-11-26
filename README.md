@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/fylo-data-storage-component-Yt_iC-934H)
+- [Live Site URL](https://ornate-zabaione-5e8eb9.netlify.app/)
 
 ## My process
 
@@ -54,11 +54,6 @@ I got a better understanding of linera gradient, ::after, and BEM.
 ### Continued development
 
 I'd like to continue and make better use of gradient, ::after, BEM, and getting better at semantic HTML. In the future reworking this project by making it more dynamic could be pretty neat as well as making the buttons functional and directing that info to and from a database. I'm just saying would pretty darn cool!
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
