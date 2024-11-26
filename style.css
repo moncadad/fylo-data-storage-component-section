@@ -187,8 +187,9 @@ main,
     gap: 20px;
   }
   .controls__container{    
-  max-width: 200px;
+  max-width: 350px;
   }
+
   .meter__container,
   .controls__container {
     width: 100%;
