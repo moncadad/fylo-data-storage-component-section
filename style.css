@@ -74,8 +74,6 @@ main,
 
 .main__wrapper .controls__container {
   background: var(--Dark-Blue);
-  max-width: 200px;
-  width: 100%;
   padding: 40px;
   margin-bottom: 20px;
   border-radius: 10px 95px 10px 10px;
@@ -187,6 +185,9 @@ main,
     justify-content: space-between;
     align-items: flex-end;
     gap: 20px;
+  }
+  .controls__container{    
+  max-width: 200px;
   }
   .meter__container,
   .controls__container {
